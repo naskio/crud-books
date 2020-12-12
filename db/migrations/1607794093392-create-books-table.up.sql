@@ -1,6 +1,6 @@
 -- Your migration code here.create table books (
+create table books (
   id uuid primary key default uuid_generate_v4(),
-  name text unique,
   info json,
   created_at timestamp default current_timestamp,
   updated_at timestamp default current_timestamp

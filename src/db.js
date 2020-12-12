@@ -4,12 +4,11 @@ const client = new Client({
   user: process.env.PGUSER,
   host: process.env.PGHOST,
   database: process.env.PGDATABASE,
-  password: process.env.PGPASSWORD,
   port: process.env.PGPORT,
 })
 
 const connect = async () =>
-  client.connect().catch((err) => {
+  client.connect().catch(err => {
     console.error(
       `Postgres: Connection refused to ${err.address + ':' + err.port}`
     )
