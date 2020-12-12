@@ -5,10 +5,12 @@
   "license": "MIT",
   "dependencies": {
     "@frenchpastries/millefeuille": "^0.1.11",
+    "@wolfox/caravel": "^0.1.2",
     "dotenv": "^8.2.0",
     "pg": "^8.5.1"
   },
   "scripts": {
-    "start": "node src/main"
+    "start": "node src/main",
+    "migrate": "caravel migrate"
   }
 }
