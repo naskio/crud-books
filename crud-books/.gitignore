@@ -1,3 +1,6 @@
+# Aliases for module
+/*.js
+
 # JS Stuff
 node_modules/
 
@@ -11,5 +14,3 @@ yarn-error.log
 # Test stuff
 coverage/
 .nyc*
-
-.idea/

@@ -1,0 +1,10 @@
+Dockerfile
+.dockerignore
+logs/
+.DS_Store
+.gitignore
+.env
+.env.local
+.idea/
+node_modules/
+*.tmp.*

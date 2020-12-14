@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    restart: always
+    build:
+      context: ./database-books
+    volumes:
+      - ./database-books/etc:/etc/postgresql
+      - ./database-books/log:/var/log/postgresql
+      - ./database-books/lib:/var/lib/postgresql
+    ports:
+      - ${PGPORT}:5432
+  web:
+    restart: always
+    build:
+      context: ./crud-books
+    environment:
+      PORT: 3000
+      COUCOU: ${COUCOU}
+      PGHOST: ${PGHOST}
+      PGUSER: ${PGUSER}
+      PGDATABASE: ${PGDATABASE}
+      PGPORT: ${PGPORT}
+    ports:
+      - ${PORT}:3000
+    links:
+      - db:${PGHOST}
+    depends_on:
+      - db
+

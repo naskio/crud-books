@@ -1,0 +1,8 @@
+etc/*
+!etc/.gitkeep
+
+lib/*
+!lib/.gitkeep
+
+log/*
+!log/.gitkeep
